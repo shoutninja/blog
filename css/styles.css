@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.outer {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.card-panel {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-panel img {
+    width: 10%;
+}
+
+@media (max-width: 960px) and (min-width: 769px) {
+    .card-panel img {
+        width: 20%;
+    }
+}
+
+@media (max-width: 786px) {
+    .card-panel img {
+        width: 40%;
+    }
+}
