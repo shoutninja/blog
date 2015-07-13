@@ -30,22 +30,20 @@
                     </div>
 
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12 m12 l12">
-                    <div class="card" ng-repeat='project in projects | orderBy:"$id":true'>
-                        <div class="card-content">
-                            <span class="card-title blue-grey-text">{{project.name}}</span>
+                <div ng-repeat='project in projects | orderBy:"$id":true'>
+                    <div class="col s12 m6 l12" ng-if="!project.hidden">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title blue-grey-text">{{project.name}}</span>
 
-                            <p>{{project.desc}}</p>
-                        </div>
-                        <div class="card-action">
-                            <a ng-href="{{project.url}}">Check it out!</a>
+                                <p>{{project.desc}}</p>
+                            </div>
+                            <div class="card-action">
+                                <a ng-href="{{project.url}}">Check it out!</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col s12 m12 l12">
                     <div class="card">
                         <div class="card-content">
@@ -63,7 +61,8 @@
 </div>
 
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large transparent" href="https://chrome.google.com/webstore/detail/lynx/npmpjpaieebefmoplikkgfgogfpjdhek">
+    <a class="btn-floating btn-large transparent"
+       href="https://chrome.google.com/webstore/detail/lynx/npmpjpaieebefmoplikkgfgogfpjdhek">
         <img class="circle" width="100%" height="100%" src="img/Lynx_Chrome.png"/>
     </a>
     <ul>
